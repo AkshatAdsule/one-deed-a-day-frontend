@@ -1,7 +1,8 @@
 import React, { ReactElement, useState } from 'react';
+import { LoginInterface } from '../apiacess';
 
 export interface Props {
-  onSubmit: () => void;
+  onSubmit: (user: any) => void;
 }
 
 function Login(props: Props): ReactElement {
@@ -31,7 +32,7 @@ function Login(props: Props): ReactElement {
         type="submit"
         className="btn btn-lg btn-outline-light"
         onClick={(e) => {
-          props.onSubmit();
+          props.onSubmit({ username: username, password: password });
           e.preventDefault();
         }}>
         Register
