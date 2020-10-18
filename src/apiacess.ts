@@ -4,10 +4,7 @@ const api_url = 'http://localhost:2000';
 export interface LoginInterface {
   user: { username: string; password: string };
 }
-export function login(
-  loginInterface: LoginInterface,
-  onResponse: (status: number) => void,
-): void {
+export function login(loginInterface: LoginInterface, onResponse: (status: number) => void): void {
   axios
     .post(api_url + '/login', loginInterface)
     .then((res) => {

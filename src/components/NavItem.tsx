@@ -7,9 +7,7 @@ export interface Props {
 function NavItem(props: Props): ReactElement {
   return (
     <li className="nav-item">
-      <a
-        className={`nav-link ${props.link.active && 'active'}`}
-        href={props.link.url}>
+      <a className={`nav-link ${props.link.active && 'active'}`} href={props.link.url}>
         {props.link.name}
       </a>
     </li>
