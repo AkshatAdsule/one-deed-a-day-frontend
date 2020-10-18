@@ -1,4 +1,5 @@
 import React, { ReactElement } from 'react';
+import NavItem from './NavItem';
 
 export interface Link {
   name: string;
@@ -33,25 +34,9 @@ function Navbar(props: Props): ReactElement {
 
       <div className="collapse navbar-collapse" id="navbarSupportedContent">
         <ul className="navbar-nav ml-auto">
-          <li className="nav-item">
-            <a
-              className={`nav-link ${props.links.linkOne.active && 'active'}`}
-              href={props.links.linkOne.url}>
-              {props.links.linkOne.name}
-            </a>
-          </li>
-          <li className="nav-item">
-            <a
-              className={`nav-link ${props.links.linkTwo.active && 'active'}`}
-              href={props.links.linkTwo.url}>
-              {props.links.linkTwo.name}
-            </a>
-          </li>
-          <li className="nav-item">
-            <a className="nav-link" href={props.links.linkThree.url}>
-              {props.links.linkThree.name}
-            </a>
-          </li>
+          <NavItem link={props.links.linkOne} />
+          <NavItem link={props.links.linkTwo} />
+          <NavItem link={props.links.linkThree} />
         </ul>
       </div>
     </nav>
