@@ -1,0 +1,24 @@
+.deed {
+  margin: 2% 10%;
+  background-color: rgba(255, 255, 255, 0.5);
+  color: black;
+  width: 80%;
+  padding: 2%;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: row;
+}
+
+.deed-body {
+  flex-grow: 5;
+}
+.author {
+  color: gray;
+}
+
+.toggle {
+  display: block;
+  margin: auto;
+  justify-content: flex-end;
+  height: 2%;
+}
